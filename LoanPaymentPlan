@@ -1,0 +1,117 @@
+#include <iostream>
+#include <iomanip>
+
+
+int main()
+{
+    //Declaring all the variables for the month counter
+    const int months = 12;
+    int count = 1;
+
+
+    //variable declaration for all the calculations in the loop
+    float loan,payment,interest,interestPaid, principlePaid,balance,totalInterestPaid,totalPaid;
+
+
+    /*variables are used to set the distance between words, to shorten the amount
+    needed to type (ex. "sep15" instead of std::setw(15)) */
+    auto sep15 = std::setw(15);
+    auto sep13 = std::setw(13);
+    auto sep12 = std::setw(12);
+    auto sep10 = std::setw(10);
+    auto sep5 = std::setw(5);
+
+
+    //Asking for the user's input to assign the variables with its numbers
+    std::cout << "How much money do you need to loan? " << std::endl;
+    std::cin>>loan;
+    std::cout<<"How much are your payments going to be each month? "<<std::endl;
+    std::cin>>payment;
+    std::cout<<"Enter the yearly interest rate %: "<<std::endl;
+    std::cin>>interest;
+
+
+    //The value of the variable interest is firstly divided by 100 to convert into decimal
+    //Then the variable interest is divided by the variable months which has the value of 12
+    interest = interest/100;
+    interest = interest/months;
+
+
+    //Printing out the output of the user's input to give a good visual
+    std::cout<<"Loan/Principle: $";std::cout<<loan<<std::endl;
+    std::cout<<"Interest: ";std::cout<<interest;std::cout<<"%"<<std::endl;
+    std::cout<<"Payment: $";std::cout<<payment<<std::endl;
+
+
+    //Displaying the schedules in columns for a neater visual
+    std::cout<<"     Principle     Interest     Principle     Ending     Payment     Month"<<std::endl;
+    std::cout<<"                     Paid         Paid        Payment    Balance     Paid On"<<std::endl;
+    std::cout<<"-----------------------------------------------------------------------------"<<std::endl;
+
+
+    //The While loop has the algorithm that processes and changes each value every month
+    while(loan > 0)
+    {
+        //every number output is limited to two decimal places
+        std::cout<<std::fixed<<std::setprecision(2);
+
+
+        //"Principle" column printed
+        std::cout<< sep10 <<loan;
+
+
+        //interest paid is calculated, and the calculated number is added to the total interest paid
+        interestPaid = loan*interest;
+        totalInterestPaid += interestPaid;
+
+
+        //"Interest Paid" column printed
+        std::cout<<sep15<<interestPaid;
+        principlePaid = payment - interestPaid;
+
+
+        /*if the principle paid is larger than the principle, the principle paid
+        and payment will default to the principle value */
+        if (principlePaid>loan)
+        {
+            principlePaid = loan;
+            payment = loan;
+        }
+
+
+        //"Principle Paid" column printed
+        std::cout<<sep15<<principlePaid;
+
+
+        //"Ending Payment" column printed
+        std::cout<<sep13<<payment;
+        balance = loan - principlePaid;
+
+
+        //"Payment Balance" column printed
+        std::cout<<sep12<<balance;
+
+
+        //"Month Paid On" column printed
+        std::cout<<sep5<<count;
+        std::cout<<" Month"<<std::endl;
+
+
+        //month is incremented
+        count++;
+
+
+        //loan (or principle) is set to the end balance for the next line of the loop
+        loan = balance;
+
+
+        //the payment for each line is added to the total Paid variable
+        totalPaid+= payment;
+    }
+
+
+    //The total paid and total interest paid is printed out
+    std::cout<<"Total paid: $";std::cout<<totalPaid<<std::endl;
+    std::cout<<"Total interest paid: $";std::cout<<totalInterestPaid;
+    return 0;
+}
