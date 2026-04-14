@@ -8,3 +8,6 @@ Hey, I'm Miles — a Software Engineering student at FGCU. This repo is where I 
 ## Badges
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Milesb7/MilesBrown-Projects/badge)](https://securityscorecards.dev/viewer/?uri=github.com/Milesb7/MilesBrown-Projects)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/YOUR_PROJECT_ID/badge)](https://www.bestpractices.dev/projects/YOUR_PROJECT_ID)
+
+## Usage
+Clone the repo and open the relevant project file in your preferred IDE or text editor. Each project contains its own instructions within the file.
