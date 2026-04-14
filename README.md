@@ -7,12 +7,10 @@ Hey, I'm Miles — a Software Engineering student at FGCU. This repo is where I 
 
 ## Badges
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Milesb7/MilesBrown-Projects/badge)](https://securityscorecards.dev/viewer/?uri=github.com/Milesb7/MilesBrown-Projects)
-[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/YOUR_PROJECT_ID/badge)](https://www.bestpractices.dev/projects/YOUR_PROJECT_ID)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/12543/badge)](https://www.bestpractices.dev/projects/12543)
 
 ## Usage
 Clone the repo and open the relevant project file in your preferred IDE or text editor. Each project contains its own instructions within the file.
 
 ## Security
 To report a security vulnerability, please open a GitHub Issue or contact the repository owner directly via GitHub.
-
-[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/12543/badge)](https://www.bestpractices.dev/projects/12543)
