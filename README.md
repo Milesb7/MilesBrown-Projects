@@ -14,3 +14,5 @@ Clone the repo and open the relevant project file in your preferred IDE or text 
 
 ## Security
 To report a security vulnerability, please open a GitHub Issue or contact the repository owner directly via GitHub.
+
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/12543/badge)](https://www.bestpractices.dev/projects/12543)
