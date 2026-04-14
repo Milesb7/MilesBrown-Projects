@@ -11,3 +11,6 @@ Hey, I'm Miles — a Software Engineering student at FGCU. This repo is where I 
 
 ## Usage
 Clone the repo and open the relevant project file in your preferred IDE or text editor. Each project contains its own instructions within the file.
+
+## Security
+To report a security vulnerability, please open a GitHub Issue or contact the repository owner directly via GitHub.
